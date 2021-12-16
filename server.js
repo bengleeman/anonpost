@@ -81,7 +81,7 @@ app.get('/results', function(request, response) {
     }
 });
 
-app.get('/scores', function(request, response) {
+app.get('/explore', function(request, response) {
   let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
   let opponentArray=[];
 
@@ -97,7 +97,7 @@ app.get('/scores', function(request, response) {
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("scores",{
+  response.render("explore",{
     opponents: opponentArray
   });
 });
