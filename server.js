@@ -127,13 +127,13 @@ app.get('/opponent/:opponentName', function(request, response) {
   }
 });
 
-app.get('/opponentCreate', function(request, response) {
+app.get('/makePost', function(request, response) {
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
-    response.render("opponentCreate");
+    response.render("makePost");
 });
 
-app.post('/opponentCreate', function(request, response) {
+app.post('/makePost', function(request, response) {
     let opponentName = request.body.opponentName;
     let opponentPhoto = request.body.opponentPhoto;
     if(opponentName&&opponentPhoto){
