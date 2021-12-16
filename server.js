@@ -23,7 +23,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/play', function(request, response) {
-    let players = JSON.parse(fs.readFileSync('data/opponents.json'));
+    let players = JSON.parse(fs.readFileSync('data/post.json'));
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
     response.render("play", {
@@ -32,7 +32,7 @@ app.get('/play', function(request, response) {
 });
 
 app.get('/results', function(request, response) {
-    let players = JSON.parse(fs.readFileSync('data/opponents.json'));
+    let players = JSON.parse(fs.readFileSync('data/'));
 
     //accessing URL query string information from the request object
     let opponent = request.query.opponent;
@@ -65,7 +65,7 @@ app.get('/results', function(request, response) {
       else players[opponent]["tie"]++;
 
       //update data store to permanently remember results
-      fs.writeFileSync('data/opponents.json', JSON.stringify(players));
+      fs.writeFileSync('data/post.json', JSON.stringify(players));
 
       response.status(200);
       response.setHeader('Content-Type', 'text/html')
@@ -81,8 +81,8 @@ app.get('/results', function(request, response) {
     }
 });
 
-app.get('/scores', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
+app.get('/explore', function(request, response) {
+  let opponents = JSON.parse(fs.readFileSync('data/post.json'));
   let opponentArray=[];
 
   //create an array to use sort, and dynamically generate win percent
@@ -97,13 +97,13 @@ app.get('/scores', function(request, response) {
 
   response.status(200);
   response.setHeader('Content-Type', 'text/html')
-  response.render("scores",{
+  response.render("explore",{
     opponents: opponentArray
   });
 });
 
 app.get('/opponent/:opponentName', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
+  let opponents = JSON.parse(fs.readFileSync('data/post.json'));
 
   // using dynamic routes to specify resource request information
   let opponentName = request.params.opponentName;
@@ -137,7 +137,7 @@ app.post('/makePost', function(request, response) {
     let opponentName = request.body.opponentName;
     let opponentPhoto = request.body.opponentPhoto;
     if(opponentName&&opponentPhoto){
-      let opponents = JSON.parse(fs.readFileSync('data/opponents.json'));
+      let opponents = JSON.parse(fs.readFileSync('data/post.json'));
       let newOpponent={
         "name": opponentName,
         "photo": opponentPhoto,
@@ -146,7 +146,7 @@ app.post('/makePost', function(request, response) {
         "tie": 0,
       }
       opponents[opponentName] = newOpponent;
-      fs.writeFileSync('data/opponents.json', JSON.stringify(opponents));
+      fs.writeFileSync('data/post.json', JSON.stringify(opponents));
 
       response.status(200);
       response.setHeader('Content-Type', 'text/html')
