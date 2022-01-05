@@ -18,11 +18,53 @@ app.set('view engine', 'ejs'); //specify templating library
 
 app.get('/', function(request, response) {
   response.status(200);
-  response.setHeader('Content-Type', 'text/html')
+  response.setHeader('Content-Type', 'text/html');
   response.render("index");
 });
 
-app.get('/play', function(request, response) {
+app.get('/explore', function(request, response) {
+  let posts = JSON.parse(fs.readFileSync('data/posts.json'));
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html');
+  response.render("explore", {
+    posts: posts
+  });
+});
+
+app.get('/posts/makePost', function(request, response) {
+  let authors = JSON.parse(fs.readFileSync('data/authors.json'));
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html');
+  response.render("posts/makePost", {
+    authors: authors
+  });
+});
+
+app.get('/makeAuthor', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html');
+  response.render("makeAuthor");
+});
+
+app.get('/posts/:postTitle', function(request, response){
+  let posts = JSON.parse(fs.readFileSync('data/posts.json'));
+  let postTitle = request.params.postTitle;
+  if (posts[postTitle]){
+    response.status(200);
+    response.setHeader('Content-Type', 'text/html');
+    response.render("posts/post", {
+      post: posts[postTitle]
+    });
+  } else {
+    response.status(404);
+    response.setHeader('Content-Type', 'text/html');
+    response.render("error", {
+      "errorCode":"404"
+    });
+  }
+});
+
+/*app.get('/play', function(request, response) {
     let players = JSON.parse(fs.readFileSync('data/post.json'));
     response.status(200);
     response.setHeader('Content-Type', 'text/html')
@@ -158,7 +200,7 @@ app.post('/makePost', function(request, response) {
         "errorCode":"400"
       });
     }
-});
+});*/
 
 // Because routes/middleware are applied in order,
 // this will act as a default error route in case of
