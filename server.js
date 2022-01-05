@@ -32,11 +32,11 @@ app.get('/explore', function(request, response) {
 });
 
 app.get('/posts/makePost', function(request, response) {
-  let authors = JSON.parse(fs.readFileSync('data/authors.json'));
+  let pseudonyms = JSON.parse(fs.readFileSync('data/pseudonyms.json'));
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
   response.render("posts/makePost", {
-    authors: authors
+    pseudonyms: pseudonyms
   });
 });
 

@@ -3,8 +3,13 @@
 <h2>Create a post</h2>
 
 <form action="/makePost" method="POST">
-  <label for="name">Post:</label>
-  <input type="text" id="info" name="name" value=""><br>
+  <label for="pseudonym">Pseudonym:</label><br>
+  <select name="pseudonym" id="pseudonym" required>
+      <option disabled selected value> - Choose a Pseudonym - </option>
+    <% for (pseudonym of Object.values(pseudonyms)){%>
+      <option value="<%=pseudonym.Pseudonym%>"><%=pseudonym.Pseudonym%></option>
+    <%}%></select><br>
+  
   <br>
   <input type="submit" value="Publish">
 
