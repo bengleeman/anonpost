@@ -1,9 +1,23 @@
 {
   "Post-1": {
-    "Date": "January 4, 2022",
+    "Date": "1/4/2022",
     "Title": "Post 1",
     "Link": "Post-1",
     "Pseudonym": "Mark Twain",
-    "Text": "Hello, my name is Mark Twain"
+    "Text": ["Hello, my name is Mark Twain"]
+  },
+  "Twain-2": {
+    "Date": "1/5/2022",
+    "Title": "Twain 2",
+    "Link": "Twain-2",
+    "Pseudonym": "Mark Twain",
+    "Text": ["Hi"]
+  },
+  "Rowling-1": {
+    "Date": "1/5/2022",
+    "Title": "Rowling 1",
+    "Link": "Rowling-1",
+    "Pseudonym": "JK Rowling",
+    "Text": ["Hi"]
   }
 }

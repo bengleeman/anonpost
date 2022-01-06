@@ -1,18 +1,22 @@
 <%- include('../partials/header', {title:"Make Post"}) -%>
 
-<h2>Create a post</h2>
+<div class="container-fluid">
+  <h2>Create a Post</h2>
 
-<form action="/makePost" method="POST">
-  <label for="pseudonym">Pseudonym:</label><br>
-  <select name="pseudonym" id="pseudonym" required>
+  <form action="/posts/makePost" method="POST">
+    <label for="Pseudonym">Pseudonym:</label><br>
+    <select name="Pseudonym" id="Pseudonym" required>
       <option disabled selected value> - Choose a Pseudonym - </option>
-    <% for (pseudonym of Object.values(pseudonyms)){%>
+      <% for (pseudonym of Object.values(pseudonyms)){%>
       <option value="<%=pseudonym.Pseudonym%>"><%=pseudonym.Pseudonym%></option>
-    <%}%></select><br>
-  
-  <br>
-  <input type="submit" value="Publish">
+      <%}%></select><br><br>
+        <label for="Title">Title:</label><br>
+        <input type="text" id="Title" name="Title" required><br><br>
+        <label for="Text">Post Text:</label><br>
+        <textarea id="Text" name="Text" rows="6" cols="120" required></textarea><br>
+        <br>
+        <input type="submit" value="Publish">
 
-</form>
+    </form>
 
 <%- include('../partials/footer') -%>

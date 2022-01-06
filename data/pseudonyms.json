@@ -1,6 +1,10 @@
 {
-  "Mark-Twain": {
+  "Mark Twain": {
     "Pseudonym": "Mark Twain",
-    "Posts": ["Post-1"]
+    "Posts": ["Post-1", "Twain-2"]
+  },
+  "JK Rowling": {
+    "Pseudonym": "JK Rowling",
+    "Posts": ["Rowling-1"]
   }
 }

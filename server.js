@@ -40,10 +40,25 @@ app.get('/posts/makePost', function(request, response) {
   });
 });
 
-app.get('/makeAuthor', function(request, response) {
-  response.status(200);
-  response.setHeader('Content-Type', 'text/html');
-  response.render("makeAuthor");
+app.post('/posts/makePost', function(request, response) {
+  let posts = JSON.parse(fs.readFileSync('data/posts.json'));
+  let pseudonymList = JSON.parse(fs.readFileSync('data/pseudonyms.json'));
+  let date = new Date();
+  let month = date.getMonth()+1
+  let newPost = {
+    "Date": month.toString() + "/" + date.getDate().toString() + "/" + date.getFullYear().toString(),
+    "Title": request.body.Title.trim(),
+    "Link": request.body.Title.trim().replace(/ /g, "-"),
+    "Pseudonym": request.body.Pseudonym.trim(),
+    "Text": request.body.Text.trim().split(/\r?\n/)
+  };
+  posts[newPost["Link"]]=newPost;
+  if (pseudonymList[newPost["Pseudonym"]]){
+    pseudonymList[newPost["Pseudonym"]].Posts.push(newPost["Link"])
+  }
+  fs.writeFileSync('data/posts.json', JSON.stringify(posts));
+  fs.writeFileSync('data/pseudonyms.json', JSON.stringify(pseudonymList));
+  response.redirect("/posts/makePost")
 });
 
 app.get('/posts/:postTitle', function(request, response){
@@ -62,6 +77,12 @@ app.get('/posts/:postTitle', function(request, response){
       "errorCode":"404"
     });
   }
+});
+
+app.get('/makeAuthor', function(request, response) {
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html');
+  response.render("makeAuthor");
 });
 
 /*app.get('/play', function(request, response) {

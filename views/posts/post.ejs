@@ -6,5 +6,17 @@
           <h2><%=post.Title%></h2>
         </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-12">
+          <p><i><%=post.Pseudonym%></i>, <%=post.Date%></p>
+        </div>
+      </div>
+        <% for (let i = 0; i<post.Text.length; i++){%>
+          <div class="row">
+            <div class="col-12">
+              <p><%=post.Text[i]%></p>
+            </div>
+          </div>
+        <%}%>
+  </div>
 <%- include('../partials/footer.ejs'); %>
