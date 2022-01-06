@@ -45,10 +45,11 @@ app.post('/posts/makePost', function(request, response) {
   let pseudonymList = JSON.parse(fs.readFileSync('data/pseudonyms.json'));
   let date = new Date();
   let month = date.getMonth()+1
+  let t=request.body.Title.trim();
   let newPost = {
     "Date": month.toString() + "/" + date.getDate().toString() + "/" + date.getFullYear().toString(),
     "Title": request.body.Title.trim(),
-    "Link": request.body.Title.trim().replace(/ /g, "-"),
+    "Link": t.replaceAll(" ", "-"),
     "Pseudonym": request.body.Pseudonym.trim(),
     "Text": request.body.Text.trim().split(/\r?\n/)
   };
