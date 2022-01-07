@@ -4,62 +4,81 @@
     "Title": "Post 1",
     "Link": "Post-1",
     "Pseudonym": "Mark Twain",
-    "Text": ["Hello, my name is Mark Twain"]
+    "Text": [
+      "Hello, my name is Mark Twain"
+    ]
   },
   "Twain-2": {
     "Date": "1/5/2022",
     "Title": "Twain 2",
     "Link": "Twain-2",
     "Pseudonym": "Mark Twain",
-    "Text": ["Hi"]
+    "Text": [
+      "Hi"
+    ]
   },
   "Rowling-1": {
     "Date": "1/5/2022",
     "Title": "Rowling 1",
     "Link": "Rowling-1",
     "Pseudonym": "JK Rowling",
-    "Text": ["Hi"]
+    "Text": [
+      "Hi"
+    ]
   },
   "JK-Post 3": {
     "Date": "1/6/2022",
     "Title": "JK Post 3",
     "Link": "JK-Post 3",
     "Pseudonym": "JK Rowling",
-    "Text": ["hi how are you", "aidan"]
+    "Text": [
+      "hi how are you",
+      "aidan"
+    ]
   },
   "gggg": {
     "Date": "1/6/2022",
     "Title": "gggg",
     "Link": "gggg",
     "Pseudonym": "Mark Twain",
-    "Text": ["xgdhxndf"]
+    "Text": [
+      "xgdhxndf"
+    ]
   },
   "dhjdhj": {
     "Date": "1/6/2022",
     "Title": "dhjdhj",
     "Link": "dhjdhj",
     "Pseudonym": "Mark Twain",
-    "Text": ["eskfkd"]
-  },
-  "how are you": {
-    "Date": "1/6/2022",
-    "Title": "how are you",
-    "Link": "how are you",
-    "Pseudonym": "Mark Twain",
-    "Text": ["kdhfkdsj"]
+    "Text": [
+      "eskfkd"
+    ]
   },
   "hi-im-aidan": {
     "Date": "1/6/2022",
     "Title": "hi im aidan",
     "Link": "hi-im-aidan",
     "Pseudonym": "Mark Twain",
-    "Text": ["dkfjkdjfxlkd"]
+    "Text": [
+      "dkfjkdjfxlkd"
+    ]
   },
   "hi-i-am-aidan": {
     "Date": "1/6/2022",
     "Title": "hi i am aidan",
     "Link": "hi-i-am-aidan",
     "Pseudonym": "Mark Twain",
-    "Text": ["dkjfkdjkfjd"]
+    "Text": [
+      "dkjfkdjkfjd"
+    ]
+  },
+  "flash": {
+    "Date": "1/6/2022",
+    "Title": "flash",
+    "Link": "flash",
+    "Pseudonym": "barry allen",
+    "Text": [
+      "I am the best flash"
+    ]
   }
 }

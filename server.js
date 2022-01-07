@@ -80,10 +80,21 @@ app.get('/posts/:postTitle', function(request, response){
   }
 });
 
-app.get('/makeAuthor', function(request, response) {
+app.get('/pseudonyms/registerPseudonym', function(request, response) {
   response.status(200);
   response.setHeader('Content-Type', 'text/html');
-  response.render("makeAuthor");
+  response.render("pseudonyms/registerPseudonym");
+});
+
+app.post('/pseudonyms/registerPseudonym', function (request, response){
+  let pseudonymList = JSON.parse(fs.readFileSync('data/pseudonyms.json'));
+  let newPseudonym = {
+    "Pseudonym": request.body.Pseudonym.trim(),
+    "Posts": []
+  }
+  pseudonymList[newPseudonym['Pseudonym']]=newPseudonym;
+  fs.writeFileSync('data/pseudonyms.json', JSON.stringify(pseudonymList));
+  response.redirect("/pseudonyms/registerPseudonym")
 });
 
 /*app.get('/play', function(request, response) {
