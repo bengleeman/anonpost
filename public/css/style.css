@@ -11,3 +11,8 @@ table, th, td {
   padding: 3px;
   text-align: center;
 }
+
+.jumbotron{
+  padding: 10px;
+  text-align: center;
+}

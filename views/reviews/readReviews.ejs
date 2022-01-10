@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs'); %>
+  <section id="reviews">
+    <div class="container-fluid">
+      <br><h2>Reviews of this Blog</h2><br>
+      <% let numGreats=0, numGoods = 0, numSats = 0, numBads = 0, numVLikely = 0, numMaybe = 0, numUnlikely = 0;%>
+      <% for (review of Object.values(reviews)){%>
+        <% if (review.Experience == "Great"){numGreats++};%>
+        <% if (review.Experience == "Good"){numGoods++};%>
+        <% if (review.Experience == "Satisfactory"){numSats++};%>
+        <% if (review.Experience == "Bad"){numBads++};%>
+        <% if (review.Return == "Very Likely"){numVLikely++};%>
+        <% if (review.Return == "Maybe"){numMaybe++};%>
+        <% if (review.Return == "Unlikely"){numUnlikely++};%>
+        <%}%>
+      <div class="row justify-content-center">
+        <div class="col-8">
+          <div class="jumbotron">
+            <p><b><%=numGreats%> out of <%=(numGreats+numGoods+numSats+numBads)%></b> users had a "Great" experience on this blog.</p>
+            <p><b><%=numVLikely%> out of <%=(numVLikely+numMaybe+numUnlikely)%></b> users said they would be "Very Likely" to return to this blog.</p>
+          </div>
+        </div>
+      </div>
+      <% for (review of Object.values(reviews)){%>
+      <div class="row">
+        <div class="col-12">
+          <hr>
+          <p><i>How was your experience using this blog?</i></p>
+            <p><%=review.Experience%></p>
+          <p><i>How likely are you to return to this blog?</i></p>
+            <p><%=review.Return%></p>
+          <p><i>Other thoughts on the blog?</i></p>
+            <%if(review.Other==""){%>
+              <p>N/A</p>
+            <%} else{%>
+              <p><%=review.Other%></p>
+            <%}%>
+        </div>
+      </div>
+      <%}%>
+  </div>
+<%- include('../partials/footer.ejs'); %>

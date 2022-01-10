@@ -97,143 +97,32 @@ app.post('/pseudonyms/registerPseudonym', function (request, response){
   response.redirect("/pseudonyms/registerPseudonym")
 });
 
-/*app.get('/play', function(request, response) {
-    let players = JSON.parse(fs.readFileSync('data/post.json'));
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("play", {
-      data: players
-    });
-});
-
-app.get('/results', function(request, response) {
-    let players = JSON.parse(fs.readFileSync('data/'));
-
-    //accessing URL query string information from the request object
-    let opponent = request.query.opponent;
-    let playerThrow = request.query.throw;
-
-    if(players[opponent]){
-      let opponentThrowChoices=["Paper", "Rock", "Scissors"];
-      let results={};
-
-      results["playerThrow"]=playerThrow;
-      results["opponentName"]=opponent;
-      results["opponentPhoto"]=players[opponent].photo;
-      results["opponentThrow"] = opponentThrowChoices[Math.floor(Math.random() * 3)];
-
-      if(results["playerThrow"]===results["opponentThrow"]){
-        results["outcome"] = "tie";
-      }else if(results["playerThrow"]==="Paper"){
-        if(results["opponentThrow"]=="Scissors") results["outcome"] = "lose";
-        else results["outcome"] = "win";
-      }else if(results["playerThrow"]==="Scissors"){
-        if(results["opponentThrow"]=="Rock") results["outcome"] = "lose";
-        else results["outcome"] = "win";
-      }else{
-        if(results["opponentThrow"]=="Paper") results["outcome"] = "lose";
-        else results["outcome"] = "win";
-      }
-
-      if(results["outcome"]=="lose") players[opponent]["win"]++;
-      else if(results["outcome"]=="win") players[opponent]["lose"]++;
-      else players[opponent]["tie"]++;
-
-      //update data store to permanently remember results
-      fs.writeFileSync('data/post.json', JSON.stringify(players));
-
-      response.status(200);
-      response.setHeader('Content-Type', 'text/html')
-      response.render("results", {
-        data: results
-      });
-    }else{
-      response.status(404);
-      response.setHeader('Content-Type', 'text/html')
-      response.render("error", {
-        "errorCode":"404"
-      });
-    }
-});
-
-app.get('/explore', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/post.json'));
-  let opponentArray=[];
-
-  //create an array to use sort, and dynamically generate win percent
-  for(name in opponents){
-    opponents[name].win_percent = (opponents[name].win/parseFloat(opponents[name].win+opponents[name].lose+opponents[name].tie) * 100).toFixed(2);
-    if(opponents[name].win_percent=="NaN") opponents[name].win_percent=0;
-    opponentArray.push(opponents[name])
-  }
-  opponentArray.sort(function(a, b){
-    return parseFloat(b.win_percent)-parseFloat(a.win_percent);
-  })
-
+app.get('/reviews/writeReview', function (request, response){
   response.status(200);
-  response.setHeader('Content-Type', 'text/html')
-  response.render("explore",{
-    opponents: opponentArray
-  });
+  response.setHeader('Content-Type', 'text/html');
+  response.render("reviews/writeReview");
 });
 
-app.get('/opponent/:opponentName', function(request, response) {
-  let opponents = JSON.parse(fs.readFileSync('data/post.json'));
-
-  // using dynamic routes to specify resource request information
-  let opponentName = request.params.opponentName;
-
-  if(opponents[opponentName]){
-    opponents[opponentName].win_percent = (opponents[opponentName].win/parseFloat(opponents[opponentName].win+opponents[opponentName].lose+opponents[opponentName].tie) * 100).toFixed(2);
-    if(opponents[opponentName].win_percent=="NaN") opponents[opponentName].win_percent=0;
-
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("opponentDetails",{
-      opponent: opponents[opponentName]
-    });
-
-  }else{
-    response.status(404);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("error", {
-      "errorCode":"404"
-    });
-  }
+app.get('/reviews/readReviews', function(request, response){
+  let reviews = JSON.parse(fs.readFileSync("data/reviews.json"));
+  response.status(200);
+  response.setHeader('Content-Type', 'text/html');
+  response.render("reviews/readReviews", {
+    reviews: reviews
+  })
 });
 
-app.get('/makePost', function(request, response) {
-    response.status(200);
-    response.setHeader('Content-Type', 'text/html')
-    response.render("makePost");
+app.post('/reviews/writeReview', function(request, response){
+  let reviews = JSON.parse(fs.readFileSync('data/reviews.json'));
+  let newReview = {
+    "Experience": request.body.Experience.trim(),
+    "Return": request.body.Return.trim(),
+    "Other": request.body.Other.trim()
+  };
+  reviews["Review_"+(Object.keys(reviews).length+1).toString()]=newReview;
+  fs.writeFileSync('data/reviews.json', JSON.stringify(reviews));
+  response.redirect("/reviews/readReviews");
 });
-
-app.post('/makePost', function(request, response) {
-    let opponentName = request.body.opponentName;
-    let opponentPhoto = request.body.opponentPhoto;
-    if(opponentName&&opponentPhoto){
-      let opponents = JSON.parse(fs.readFileSync('data/post.json'));
-      let newOpponent={
-        "name": opponentName,
-        "photo": opponentPhoto,
-        "win":0,
-        "lose": 0,
-        "tie": 0,
-      }
-      opponents[opponentName] = newOpponent;
-      fs.writeFileSync('data/post.json', JSON.stringify(opponents));
-
-      response.status(200);
-      response.setHeader('Content-Type', 'text/html')
-      response.redirect("/opponent/"+opponentName);
-    }else{
-      response.status(400);
-      response.setHeader('Content-Type', 'text/html')
-      response.render("error", {
-        "errorCode":"400"
-      });
-    }
-});*/
 
 // Because routes/middleware are applied in order,
 // this will act as a default error route in case of
