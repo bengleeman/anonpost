@@ -90,6 +90,8 @@ app.post('/pseudonyms/registerPseudonym', function (request, response){
   let pseudonymList = JSON.parse(fs.readFileSync('data/pseudonyms.json'));
   let newPseudonym = {
     "Pseudonym": request.body.Pseudonym.trim(),
+    "Country": request.body.Country.trim(),
+    "Age": request.body.Age.trim(),
     "Posts": []
   }
   pseudonymList[newPseudonym['Pseudonym']]=newPseudonym;
