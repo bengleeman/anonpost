@@ -1,4 +1,27 @@
 
+header, .pseudo{
+  background-color: #FC4445;
+  color: black;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-style: oblique;
+  font-variant: small-caps;
+}
+
+h1, h2{
+  font-family: 'arial';
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+body{
+  background-color: #FC4445;
+  color: black;
+  font-family: 'arial';
+  font-family: 'Courier New', monospace;
+
+}
+
 table {
   border-collapse: collapse;
   background-color: #4dffe7;
@@ -7,6 +30,7 @@ table {
 }
 
 table, th, td {
+  background-color: white;
   border: 1px solid black;
   padding: 3px;
   text-align: center;
@@ -15,4 +39,29 @@ table, th, td {
 .jumbotron{
   padding: 10px;
   text-align: center;
+}
+
+.navbar, .collapse, .nav-item{
+  background-color: white;
+  color: black;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-style: oblique;
+  font-variant: small-caps;
+}
+
+.nav-item{
+  color: black;
+}
+
+a{
+  color: grey;
+}
+
+a:hover{
+  color: black;
+}
+
+a:active{
+  color: black;
 }

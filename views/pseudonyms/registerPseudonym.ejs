@@ -1,6 +1,7 @@
 <%- include('../partials/header', {title:"Register Pseudonym"}) -%>
 
 <div class="container-fluid">
+  <div class="pseudo">
   <h2>Register a Pseudonym</h2>
 
   <form action="/pseudonyms/registerPseudonym" method="POST">
@@ -12,5 +13,5 @@
     <input type="text" id="Age" name="Age" required><br><br>
     <input type="submit" value="Register">
   </form>
-
+</div>
 <%- include('../partials/footer') -%>
