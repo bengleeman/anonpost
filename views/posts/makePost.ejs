@@ -4,7 +4,9 @@
   <h2>Create a Post</h2>
 
   <form action="/posts/makePost" method="POST">
-    <label for="Pseudonym">Pseudonym:</label><br>
+    <div class = "pseudo">
+    <label for="Pseudonym">Pseudonym:</label>
+    <br>
     <select name="Pseudonym" id="Pseudonym" required>
       <option disabled selected value> - Choose a Pseudonym - </option>
       <% for (pseudonym of Object.values(pseudonyms)){%>
@@ -16,7 +18,7 @@
         <textarea id="Text" name="Text" rows="6" cols="120" required></textarea><br>
         <br>
         <input type="submit" value="Publish">
-
+        </div>
     </form>
 
 <%- include('../partials/footer') -%>
