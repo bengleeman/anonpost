@@ -2,9 +2,10 @@
 
 <div class="container-fluid">
   <h2>Write a Review</h2>
-
+<br>
   <form action="/reviews/writeReview" method="POST">
-        <br><h6>How was your experience using this blog?</h6>
+      <i><h6>How was your experience using this blog?</h6></i>
+      <div class = "options">
         <br><input type="radio" id="great" name="Experience" value="Great">
         <label for="great">Great</label>
         <br><input type="radio" id="good" name="Experience" value="Good">
@@ -13,6 +14,7 @@
         <label for="satisfactory">Satisfactory</label>
         <br><input type="radio" id="bad" name="Experience" value="Bad">
         <label for="bad">Bad</label>
+    </div>
         <br><br><h6>How likely are you to return to this blog?</h6>
         <br><input type="radio" id="very_likely" name="Return" value="Very Likely">
         <label for="very_likely">Very Likely</label>
