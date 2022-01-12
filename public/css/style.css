@@ -1,5 +1,5 @@
 
-header, .pseudo{
+header{
   background-color: #FC4445;
   color: black;
   font-family: 'Courier New', monospace;
@@ -8,11 +8,29 @@ header, .pseudo{
   font-variant: small-caps;
 }
 
-h1, h2{
+h1, .pseudo{
   font-family: 'arial';
   font-family: 'Courier New', monospace;
   font-weight: bold;
 }
+
+.col-12, h6 {
+font-weight: 600;
+}
+
+
+
+p{
+  padding-top: 10px;
+  font-weight: 100;
+}
+
+ h2{
+   padding-top: 10px;
+   font-family: 'arial';
+   font-family: 'Courier New', monospace;
+   font-weight: bold;
+ }
 
 body{
   background-color: #FC4445;
@@ -41,25 +59,19 @@ table, th, td {
   text-align: center;
 }
 
-.navbar, .collapse, .nav-item{
-  background-color: white;
+
+a:hover{
   color: black;
+}
+
+.navbar, .collapse, .nav-item, .nav-link{
+  background-color: white;
+  color: grey;
   font-family: 'Courier New', monospace;
   font-weight: bold;
   font-style: oblique;
   font-variant: small-caps;
-}
-
-.nav-item{
-  color: black;
-}
-
-a{
-  color: grey;
-}
-
-a:hover{
-  color: black;
+  word-spacing: -5px;
 }
 
 a:active{
