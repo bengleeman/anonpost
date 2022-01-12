@@ -117,6 +117,7 @@ app.get('/reviews/readReviews', function(request, response){
 app.post('/reviews/writeReview', function(request, response){
   let reviews = JSON.parse(fs.readFileSync('data/reviews.json'));
   let newReview = {
+    "Name": request.body.Name.trim(),
     "Experience": request.body.Experience.trim(),
     "Return": request.body.Return.trim(),
     "Other": request.body.Other.trim()
