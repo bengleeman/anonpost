@@ -14,11 +14,17 @@ h1, .pseudo{
   font-weight: bold;
 }
 
-.col-12, h6 {
+.col-12, h6, i {
 font-weight: 600;
 }
 
+.name{
+  column-width: 200px;
+}
 
+.date{
+  column-width: 200px;
+}
 
 p{
   padding-top: 10px;
@@ -26,7 +32,8 @@ p{
 }
 
  h2{
-   padding-top: 10px;
+   text-align: center;
+   padding-top: 20px;
    font-family: 'arial';
    font-family: 'Courier New', monospace;
    font-weight: bold;
@@ -41,16 +48,15 @@ body{
 }
 
 table {
-  border-collapse: collapse;
-  background-color: #4dffe7;
   margin: auto;
-  width: 50%;
+  margin-top: 2.5%
 }
 
-table, th, td {
+th, td {
   background-color: white;
   border: 1px solid black;
   padding: 3px;
+  padding-top:5px;
   text-align: center;
 }
 
@@ -61,6 +67,10 @@ table, th, td {
 
 
 a:hover{
+  color: black;
+}
+
+a.current{
   color: black;
 }
 
