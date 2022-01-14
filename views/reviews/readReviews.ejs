@@ -1,7 +1,7 @@
 <%- include('../partials/header.ejs'); %>
   <section id="reviews">
     <div class="container-fluid">
-      <br><h2>Reviews of this Blog</h2><br>
+      <h2>Reviews of this Blog</h2><br>
       <% let numGreats=0, numGoods = 0, numSats = 0, numBads = 0, numVLikely = 0, numMaybe = 0, numUnlikely = 0;%>
       <% for (review of Object.values(reviews)){%>
         <% if (review.Experience == "Great"){numGreats++};%>
