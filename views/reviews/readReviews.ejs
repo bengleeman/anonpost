@@ -24,6 +24,12 @@
       <div class="row">
         <div class="col-12">
           <hr>
+          <p><i>Name:</i></p>
+            <%if(review.Name==""){%>
+                <p>N/A</p>
+              <%} else{%>
+                <p><%=review.Name%></p>
+              <%}%>
           <p><i>How was your experience using this blog?</i></p>
             <p><%=review.Experience%></p>
           <p><i>How likely are you to return to this blog?</i></p>
