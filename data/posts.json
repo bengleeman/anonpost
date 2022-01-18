@@ -1,1 +1,120 @@
-{"Post-1":{"Date":"1/4/2022","Title":"Post 1","Link":"Post-1","Pseudonym":"Mark Twain","Text":["Hello, my name is Mark Twain"]},"Twain-2":{"Date":"1/5/2022","Title":"Twain 2","Link":"Twain-2","Pseudonym":"Mark Twain","Text":["Hi"]},"Rowling-1":{"Date":"1/5/2022","Title":"Rowling 1","Link":"Rowling-1","Pseudonym":"JK Rowling","Text":["Hi"]},"JK-Post 3":{"Date":"1/6/2022","Title":"JK Post 3","Link":"JK-Post 3","Pseudonym":"JK Rowling","Text":["hi how are you","aidan"]},"gggg":{"Date":"1/6/2022","Title":"gggg","Link":"gggg","Pseudonym":"Mark Twain","Text":["xgdhxndf"]},"dhjdhj":{"Date":"1/6/2022","Title":"dhjdhj","Link":"dhjdhj","Pseudonym":"Mark Twain","Text":["eskfkd"]},"hi-im-aidan":{"Date":"1/6/2022","Title":"hi im aidan","Link":"hi-im-aidan","Pseudonym":"Mark Twain","Text":["dkfjkdjfxlkd"]},"hi-i-am-aidan":{"Date":"1/6/2022","Title":"hi i am aidan","Link":"hi-i-am-aidan","Pseudonym":"Mark Twain","Text":["dkjfkdjkfjd"]},"flash":{"Date":"1/6/2022","Title":"flash","Link":"flash","Pseudonym":"barry allen","Text":["I am the best flash"]},"Hair":{"Date":"1/10/2022","Title":"Hair","Link":"Hair","Pseudonym":"ben gleeman","Text":["i like hair"]},"idkf":{"Date":"1/10/2022","Title":"idkf","Link":"idkf","Pseudonym":"JK Rowling","Text":["hdhfkdk"]},"scars":{"Date":"1/11/2022","Title":"scars","Link":"scars","Pseudonym":"the joker","Text":["Do you wanna know how I got these scars"]},"Why-aidan-cohen-is-infinetely-superior-to-his-brother":{"Date":"1/12/2022","Title":"Why aidan cohen is infinetely superior to his brother","Link":"Why-aidan-cohen-is-infinetely-superior-to-his-brother","Pseudonym":"ari sussman","Text":["self-evident"]}}
+{
+  "Post-1": {
+    "Date": "1/4/2022",
+    "Title": "Gatsby",
+    "Link": "Post-1",
+    "Pseudonym": "Mark Twain",
+    "Text": [
+      "The stranger dropped her half full can of coke on the street and received a snide remark from a proud New Yorker: 'Uggghh,' she said in disgust, 'it’s people like you that ruin the city!' Grasping her gaunt chihuahua, she stormed passed the bottle in a huff. The New Yorker looked at me and gave one of those 'We’re on the same page, right?' looks. I smiled in return, picked up the half empty bottle, disposed of it, and went on with my merry day. Nick Carraway in The Great Gatsby says, 'There are only the pursued, the pursuing, the busy, and the tired.' Why does Nick say this? In the context of the novel he is, without a doubt, accurate. It is difficult to box humanity into categories, but for the sake of simplicity, let’s forget nuance. First, the stranger: an odd, slightly careless, free roaming spirit consumed in their own delightfully selfish world. While these traits are normally considered bad and conceited, these people tend to be incredibly attractive. Barring physical attraction, the stranger’s ability to heighten the mundane and personalize every innocuous comment is an escape others get lost in. We all have that friend, co-worker, family member etc. that pulls you into their sea of imaginary problems and indoctrinates you with incredibly vivid and emotional stories. You can choose to sail on their rickety ship as a pair, encountering monsters, tsunamis, and dolphins, or you can choose to stay on land. I choose the ship. Second, the New Yorker: a fiery and opinionated force with 100 ideas that specialized in self-gratifying sympathy."
+    ]
+  },
+  "Twain-2": {
+    "Date": "1/5/2022",
+    "Title": "Pasta Aglio E Olio",
+    "Link": "Twain-2",
+    "Pseudonym": "Mark Twain",
+    "Text": [
+      "The dish I want to share with you today is something I make for both my friends and family. Pasta Aglio E Olio is an incredibly simple meal that tastes amazing and will impress anyone who tries it.     I would say that one of the biggest influences on my life was my mom and her cooking. Ever since I was little she made these amazingly flavorful dishes from around the world; from Greece, Italy, Israel and so much more.      For me, food is beyond ingredients; it’s more the memories and emotions you can create with it. Cooking large dinners with my friends on a Friday or teaching kids at a summer camp about gazpacho. Food is a mess and sometimes a failure, but its always fun.   Now for some cooking tips: Always prepare your ingredients before hand. Just like how you might study for a test, preparation is key. And don’t skimp out on the ingredients either. The parts of your dish are as important as the whole product. Finally if you want a dish to taste amazing, do as the french do: add a lot of salt and butter."
+    ]
+  },
+  "Rowling-1": {
+    "Date": "1/5/2022",
+    "Title": "Rowling 1",
+    "Link": "Rowling-1",
+    "Pseudonym": "JK Rowling",
+    "Text": [
+      "Hi"
+    ]
+  },
+  "JK-Post 3": {
+    "Date": "1/6/2022",
+    "Title": "JK Post 3",
+    "Link": "JK-Post 3",
+    "Pseudonym": "JK Rowling",
+    "Text": [
+      "hi how are you",
+      "aidan"
+    ]
+  },
+  "gggg": {
+    "Date": "1/6/2022",
+    "Title": "gggg",
+    "Link": "gggg",
+    "Pseudonym": "Mark Twain",
+    "Text": [
+      "xgdhxndf"
+    ]
+  },
+  "dhjdhj": {
+    "Date": "1/6/2022",
+    "Title": "dhjdhj",
+    "Link": "dhjdhj",
+    "Pseudonym": "Mark Twain",
+    "Text": [
+      "eskfkd"
+    ]
+  },
+  "hi-im-aidan": {
+    "Date": "1/6/2022",
+    "Title": "hi im aidan",
+    "Link": "hi-im-aidan",
+    "Pseudonym": "Mark Twain",
+    "Text": [
+      "dkfjkdjfxlkd"
+    ]
+  },
+  "hi-i-am-aidan": {
+    "Date": "1/6/2022",
+    "Title": "hi i am aidan",
+    "Link": "hi-i-am-aidan",
+    "Pseudonym": "Mark Twain",
+    "Text": [
+      "dkjfkdjkfjd"
+    ]
+  },
+  "flash": {
+    "Date": "1/6/2022",
+    "Title": "flash",
+    "Link": "flash",
+    "Pseudonym": "barry allen",
+    "Text": [
+      "I am the best flash"
+    ]
+  },
+  "Hair": {
+    "Date": "1/10/2022",
+    "Title": "Hair",
+    "Link": "Hair",
+    "Pseudonym": "ben gleeman",
+    "Text": [
+      "i like hair"
+    ]
+  },
+  "idkf": {
+    "Date": "1/10/2022",
+    "Title": "idkf",
+    "Link": "idkf",
+    "Pseudonym": "JK Rowling",
+    "Text": [
+      "hdhfkdk"
+    ]
+  },
+  "scars": {
+    "Date": "1/11/2022",
+    "Title": "scars",
+    "Link": "scars",
+    "Pseudonym": "the joker",
+    "Text": [
+      "Do you wanna know how I got these scars"
+    ]
+  },
+  "Why-aidan-cohen-is-infinetely-superior-to-his-brother": {
+    "Date": "1/12/2022",
+    "Title": "Why aidan cohen is infinetely superior to his brother",
+    "Link": "Why-aidan-cohen-is-infinetely-superior-to-his-brother",
+    "Pseudonym": "ari sussman",
+    "Text": [
+      "self-evident"
+    ]
+  }
+}
