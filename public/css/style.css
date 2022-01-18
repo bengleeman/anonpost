@@ -8,14 +8,30 @@ header{
   font-variant: small-caps;
 }
 
-h1, .pseudo{
+.pseudo{
   font-family: 'arial';
   font-family: 'Courier New', monospace;
   font-weight: bold;
 }
 
+#Pseudo{
+  height: 22.5px;
+}
+
+h1{
+  font-family: 'arial';
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.lab{
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .col-12, h6, i {
 font-weight: 600;
+font-size: 15px;
 }
 
 .name{
@@ -85,6 +101,9 @@ a.current{
   font-style: oblique;
   font-variant: small-caps;
   word-spacing: -5px;
+  font-size: 20px;
+  margin: auto;
+  padding: 5px;
 }
 
 a:active{

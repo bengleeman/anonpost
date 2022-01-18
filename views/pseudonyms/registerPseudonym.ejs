@@ -6,15 +6,17 @@
 <div class="container-fluid">
   <div class="pseudo">
   <h2>Register a Pseudonym</h2>
-
+  <div class="psed">
   <form action="/pseudonyms/registerPseudonym" method="POST">
-    <label for="Pseudonym">Pseudonym:</label><br>
+    <div class="lab"><label for="Pseudonym">Pseudonym:</label></div>
     <input type="text" id="Pseudonym" name="Pseudonym" required><br><br>
-    <label for="Country">Country:</label><br>
+    <div class="lab"><label for="Country">Country:</label></div>
     <input type="text" id="Country" name="Country" required><br><br>
-    <label for="Age">Age:</label><br>
+    <div class="lab"><label for="Age">Age:</label></div>
     <input type="text" id="Age" name="Age" required><br><br>
     <input type="submit" value="Register">
   </form>
+  </div>
+</div>
 </div>
 <%- include('../partials/footer') -%>
