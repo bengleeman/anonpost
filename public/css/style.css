@@ -48,6 +48,14 @@ p{
   font-weight: 100;
 }
 
+.button{
+  padding-left: 675px;
+}
+
+.reviews{
+     text-align: center;
+}
+
  h2{
    text-align: center;
    padding-top: 20px;

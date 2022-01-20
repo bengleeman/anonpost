@@ -4,12 +4,15 @@
 <%- include('../partials/header', {title:"Write Review"}) -%>
 
 <div class="container-fluid">
+  <div class="reviews">
   <h2>Write a Review</h2>
 
   <form action="/reviews/writeReview" method="POST">
         <br><h6>Name:</h6><textarea id="Text" name="Name" rows="1" cols="50"></textarea>
  
         <br><br><h6>How was your experience using this blog?</h6>
+        </div>
+        <div class="button">
         <br><input type="radio" id="great" name="Experience" value="Great">
         <label for="great">Great</label>
         <br><input type="radio" id="good" name="Experience" value="Good">
@@ -18,19 +21,24 @@
         <label for="satisfactory">Satisfactory</label>
         <br><input type="radio" id="bad" name="Experience" value="Bad">
         <label for="bad">Bad</label>
-        <br><br><h6>How likely are you to return to this blog?</h6>
+  </div>
+        <div class="reviews"><br><br><h6>How likely are you to return to this blog?</h6></div>
+        <div class="button">
         <br><input type="radio" id="very_likely" name="Return" value="Very Likely">
         <label for="very_likely">Very Likely</label>
         <br><input type="radio" id="maybe" name="Return" value="Maybe">
         <label for="maybe">Maybe</label>
         <br><input type="radio" id="unlikely" name="Return" value="Unlikely">
         <label for="unlikely">Unlikely</label>
+  </div>
+        <div class="reviews">
         <br><br><h6>Other thoughts on the blog?</h6>
         <textarea id="Text" name="Other" rows="4" cols="100"></textarea>
         <br><br>
         <input type="submit" value="Submit">
+        </div>
     </form>
 
 </div>
-
+</div>
 <%- include('../partials/footer') -%>
